@@ -8,9 +8,9 @@ function updateTimeAndDay() {
     currentDay.textContent = Days[currentDate.getDay()];
 
     const currentUTCTime = document.querySelector('[data-testid="currentUTCTime"]');
-    currentUTCTime.textContent = currentDate.toUTCString();
+    currentUTCTime.textContent = currentDate.getTime();
 }
 
 updateTimeAndDay();
 
-setInterval(updateTimeAndDay, 1000);
+setInterval(updateTimeAndDay, 100);
